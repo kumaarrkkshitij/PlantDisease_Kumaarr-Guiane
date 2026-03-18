@@ -1,0 +1,10 @@
+tensorflow==2.15.0
+pillow
+scipy
+flask
+scikit-learn
+matplotlib
+seaborn
+numpy
+pandas
+h5py
