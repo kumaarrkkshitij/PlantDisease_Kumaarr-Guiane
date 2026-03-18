@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Verdantis AI - Stark Expo 2026</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Orbitron', sans-serif;
+            background-color: #ffffff;
+            color: #121212;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        /* Header & Logo */
+        .header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .header img {
+            width: 600px;
+            max-width: 90vw;
+            height: auto;
+            margin-bottom: 10px;
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+            0% {
+                box-shadow: 0 0 20px rgba(50, 50, 50, 0.4);
+            }
+            50% {
+                box-shadow: 0 0 35px rgba(80, 80, 80, 0.6);
+            }
+            100% {
+                box-shadow: 0 0 20px rgba(50, 50, 50, 0.4);
+            }
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: #00bfff; 
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        /* Form */
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            background: #1e1e1e;
+            padding: 25px 40px;
+            border-radius: 12px;
+            box-shadow: 0 0 15px rgba(0, 191, 255, 0.4);
+        }
+
+        input[type="file"] {
+            background: #2c2c2c;
+            border: 1px solid #00bfff;
+            padding: 10px 15px;
+            border-radius: 8px;
+            color: #e0e0e0;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        input[type="file"]:hover { background: #333333; }
+
+        input[type="submit"] {
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            background: #00bfff;
+            color: #ffffff;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: 0.3s;
+        }
+
+        input[type="submit"]:hover { background: #009acd; }
+
+        /* Prediction Container with floating effect */
+        .prediction-container {
+            margin-top: 30px;
+            text-align: center;
+            padding: 20px;
+            background: #1f1f1f;
+            border-radius: 12px;
+            box-shadow: 0 0 20px rgba(0, 191, 255, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .prediction-container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 25px rgba(0, 191, 255, 0.6);
+        }
+
+        .prediction-container h2 {
+            font-size: 1.8rem;
+            color: #00bfff;
+        }
+
+        .prediction-container .powered {
+            font-size: 1rem;
+            color: #aaaaaa;
+            margin-top: 8px;
+        }
+
+        .prediction-container img {
+            margin-top: 15px;
+            max-width: 350px;
+            border: 2px solid #00bfff;
+            border-radius: 12px;
+            box-shadow: 0 0 10px rgba(0, 191, 255, 0.4);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .prediction-container img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(0, 191, 255, 0.7);
+        }
+
+        footer {
+            margin-top: 50px;
+            font-size: 1rem;
+            color: #555555;
+            text-align: center;
+            max-width: 800px;
+        }
+
+        @media (max-width: 500px) {
+            .header img { width: 90vw; }
+            .subtitle { font-size: 1rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="https://static.wikia.nocookie.net/marveldatabase/images/8/8f/Stark_Industries_logo.png/revision/latest?cb=20220829171303" alt="Stark Industries Logo">
+        <br>
+        <div class="subtitle">Verdantis AI – Advanced Intelligence for Plant Health | Stark Expo 2026</div>
+    </div>
+
+    <form method="POST" enctype="multipart/form-data">
+        <input type="file" name="file" accept="image/*" required>
+        <input type="submit" value="Predict">
+    </form>
+
+    {% if result %}
+    <div class="prediction-container">
+        <h2>Prediction: {{ result }}</h2>
+        <br>
+        <img src="{{ url_for('static', filename='uploads/' + img_filename) }}" alt="Uploaded Leaf">
+        <br><br>
+        <div class="powered">Powered by Stark Tech | Verdantis AI</div>
+    </div>
+    {% endif %}
+
+    <footer>
+        &ldquo;Detection for plant homeowners, or a complementary tool for farmers — why choose one when you can have both?&rdquo; - Tony Stark
+        <br><br>
+        &copy; 2026 Stark Industries AI Labs | Plant Disease Classification
+    </footer>
+</body>
+</html>
