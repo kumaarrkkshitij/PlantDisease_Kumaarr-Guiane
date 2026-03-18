@@ -1,4 +1,4 @@
-Verdantis AI – Plant Leaf Disease Classification
+**Verdantis AI – Plant Leaf Disease Classification**
 Project Overview
 
 Verdantis AI is a deep learning system designed to identify plant leaf diseases using images. It leverages a fine-tuned MobileNetV2 CNN model trained on the PlantVillage dataset (38 plant classes, ~43,444 images). The system provides accurate predictions to help farmers and plant enthusiasts quickly detect diseases.
