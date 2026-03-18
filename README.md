@@ -12,11 +12,20 @@ Verdantis AI is a deep learning system designed to identify plant leaf diseases 
 **System/Application Development Workflow**
 - Install Dependencies (requirments.txt)
 Dependencies include: tensorflow, pillow, scipy, flask, scikit-learn, seaborn, matplotlib
-**
-Import Dataset**
+**Import Dataset**
 - Dataset link: PlantVillage - https://www.kaggle.com/datasets/emmarex/plantdisease
 - Contains 38 plant classes with ~43,444 images.
-- Used for training the CNN model.
+
+Dataset Preparation Instructions
+ - Download the Dataset: Download PlantVillage.zip from Kaggle.
+
+  Extract the Dataset:
+  - Place the zip file in dataset/PlantVillage.zip
+  - Extract it to dataset/plantvillage/
+  Or use src/get_data.py to automatically extract the zip.
+  - Dataset link: PlantVillage - https://www.kaggle.com/datasets/emmarex/plantdisease
+  - Contains 38 plant classes with ~43,444 images.
+  - Used for training the CNN model.
 
 **Verify Dataset Loading**
 - python test_dataset.py, ensures images load correctly before training.
