@@ -49,7 +49,7 @@ Training logs and plots saved to logs/ and results/.
 **Authors**
 
 Verdantis AI Team:
-Kumaarr, Kkshitij
+Kumaarr, Kkshitij &
 Del Mundo, Guiane Carlo
 
 **Notes / Ethics:**
