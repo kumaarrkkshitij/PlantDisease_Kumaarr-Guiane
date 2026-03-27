@@ -16,8 +16,9 @@ Dependencies include: tensorflow, pillow, scipy, flask, scikit-learn, seaborn, m
 - Dataset link: PlantVillage - https://www.kaggle.com/datasets/emmarex/plantdisease
 - Contains 38 plant classes with ~43,444 images.
 
-Dataset Preparation Instructions
+**Dataset Preparation Instructions**
  - Download the Dataset: Download PlantVillage.zip from Kaggle.
+ - _Note: Due to the large size of the dataset, it is recommended to download it directly from the provided link; as it's not part of our repository._
 
   Extract the Dataset:
   - Place the zip file in dataset/PlantVillage.zip
