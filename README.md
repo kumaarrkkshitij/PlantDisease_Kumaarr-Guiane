@@ -47,6 +47,28 @@ Training logs and plots saved to logs/ and results/.
 - Upload images through the web interface.
 - See predictions along with healthy scores.
 
+**Github Repository Structure**
+project-root/
+├─ data/                          # README.md, get_data.py
+├─ docs/                          # Checkpoint Report.pdf, Final Report.pdf, Proposal.pdf, ethics_statement.md, model_card.md
+├─ experiments/
+│   ├─ logs/                      # training_log.csv
+│   └─ result/                    # baseline_training_plot.png, classification_report.csv, confusion_matrix.png
+├─ notebooks/                     # 01_eda.py
+├─ src/
+│   ├─ model/                     # plant_disease_model.h5, plant_disease_model_baseline.h5
+│   ├─ eval.py
+│   ├─ predict_disease.py
+│   ├─ test_dataset.py
+│   ├─ train_baseline.py          # with plots
+│   └─ train_experiment.py        # with logs
+├─ static/
+│   └─ uploads/                  # images
+├─ templates/                    # index.html
+├─ LICENSE
+├─ README.md
+├─ app.py
+
 **Authors**
 
 Verdantis AI Team:
